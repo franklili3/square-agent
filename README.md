@@ -1,5 +1,7 @@
 # SquareAgent — Crypto Social Media Automation
 
+[中文文档](README_CN.md) | English
+
 Schedule, generate, and publish crypto content across Binance Square, X/Twitter, and Telegram.
 
 ## ⚠️ Disclaimer
