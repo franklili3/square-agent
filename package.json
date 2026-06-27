@@ -1,0 +1,36 @@
+{
+  "name": "square-agent",
+  "version": "1.0.0",
+  "description": "Crypto social media automation: RSS → LLM → publish across Binance Square, X/Twitter, and Telegram.",
+  "type": "module",
+  "main": "./src/connectors/registry.mjs",
+  "bin": {
+    "square": "./src/cli.mjs"
+  },
+  "exports": {
+    "./connectors": "./src/connectors/registry.mjs",
+    "./connectors/base": "./src/connectors/base.mjs",
+    "./connectors/binance-square": "./src/connectors/binance-square.mjs",
+    "./connectors/x-twitter": "./src/connectors/x-twitter.mjs",
+    "./connectors/telegram-channel": "./src/connectors/telegram-channel.mjs",
+    "./prompts": "./prompts/templates.mjs",
+    "./prompts/scoring": "./prompts/scoring.mjs",
+    "./prompts/generation": "./prompts/generation.mjs"
+  },
+  "scripts": {
+    "start": "node news-pipeline/pipeline.mjs --watch",
+    "once": "node news-pipeline/pipeline.mjs",
+    "monitor": "node news-pipeline/news-monitor.mjs",
+    "mcp": "node src/mcp-server.mjs",
+    "cli": "node src/cli.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "keywords": ["crypto", "binance-square", "twitter", "telegram", "automation", "rss", "llm", "social-media"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/square-agent"
+  }
+}

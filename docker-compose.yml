@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  square-agent:
+    build: .
+    container_name: square-agent
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    ports:
+      - "5577:5577"
