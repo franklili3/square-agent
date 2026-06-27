@@ -5,6 +5,10 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { CONFIG } from './config.mjs';
+import { initProxy } from '../src/proxy.mjs';
+
+// Enable proxy if configured
+initProxy(CONFIG.proxy);
 
 const DATA_DIR = CONFIG.dataDir;
 if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true });

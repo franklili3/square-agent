@@ -4,6 +4,10 @@
 
 import crypto from 'crypto';
 import { CONFIG } from './config.mjs';
+import { initProxy } from '../src/proxy.mjs';
+
+// Enable proxy if configured
+initProxy(CONFIG.proxy);
 
 // ============ LLM JWT（智谱 AI 等） ============
 function generateJWT(apiKey) {

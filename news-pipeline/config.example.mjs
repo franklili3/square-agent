@@ -32,7 +32,9 @@ export const CONFIG = {
   // 发布平台（管道自动发布）
   publishPlatforms: ['binance'],
 
-  // 代理（可选，用于访问被墙的 API）
+  // 代理（可选，用于访问被墙的 RSS 源和 LLM API）
+  // 设置后 pipeline 会自动启用 Node.js 原生代理支持
+  // 支持 HTTP 代理，格式：http://host:port
   proxy: process.env.HTTPS_PROXY || '',
 
   // 数据目录

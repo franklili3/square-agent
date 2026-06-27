@@ -10,6 +10,10 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { CONFIG } from './config.mjs';
+import { initProxy } from '../src/proxy.mjs';
+
+// Enable proxy if configured
+initProxy(CONFIG.proxy);
 import { generateContent, getMarketContext } from './news-generator.mjs';
 import { publishToAll } from '../src/connectors/registry.mjs';
 
